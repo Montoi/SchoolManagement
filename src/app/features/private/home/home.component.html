@@ -1,0 +1,231 @@
+<div class="main">
+  <div class="mid">
+    <div class="top">
+      <div class="top-banner">
+        <div class="top-banner-time">
+          <i class="bx bxs-calendar banner-icon"></i>
+          <h2 class="banner-time-today">
+            {{ today | date : "MMM d, y, h a" }}
+          </h2>
+        </div>
+        <div class="banner-content">
+          <div class="labels">
+            <h1 class="banner-h1">Buenos dias, DR. Pedro</h1>
+            <h2 class="banner-h2">Feliz {{ today | date : "EEEE" }} !</h2>
+          </div>
+          <img
+            class="banner-img"
+            src="../../../../assets/home-photos/Stuck at Home - Sitting On Floor (1).png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="center-container">
+        <h3 class="container-title">Estatus</h3>
+        <div class="container-content">
+          <img
+            class="content-img"
+            src="../../../../assets/home-photos/briefcase.png"
+            alt=""
+          />
+          <div class="content-information">
+            <h3 class="information-number">50</h3>
+            <h3 class="information-label">Asignaturas</h3>
+          </div>
+        </div>
+      </div>
+      <div class="center-container">
+        <h3 class="container-title">Estatus</h3>
+        <div class="container-content">
+          <img
+            class="content-img"
+            src="../../../../assets/home-photos/kindergarden.png"
+            alt=""
+          />
+          <div class="content-information">
+            <h3 class="information-number">50</h3>
+            <h3 class="information-label">Cursos</h3>
+          </div>
+        </div>
+      </div>
+      <div class="center-container">
+        <h3 class="container-title">Estatus</h3>
+        <div class="container-content">
+          <img
+            class="content-img"
+            src="../../../../assets/home-photos/graduate.png"
+            alt=""
+          />
+          <div class="content-information">
+            <h3 class="information-number">50</h3>
+            <h3 class="information-label">Estudiantes</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__container">
+        <div class="footer-top">
+          <h3 class="footer__container-title">Mis eventos</h3>
+          <button class="footer-button">Click</button>
+        </div>
+        <div class="footer__container-content">
+          <img
+            class="footer__content-img"
+            src="../../../../assets/home-photos/pie-chart (1).png"
+            alt=""
+          />
+          <div class="footer__content">
+            <div class="footer__content-information">
+              <h3 class="footer__information-number">2</h3>
+              <h3 class="footer__information-label">Reuniones</h3>
+            </div>
+            <div class="footer__content-information">
+              <h3 class="footer__information-number">10</h3>
+              <h3 class="footer__information-label">Análisis</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__container">
+        <div class="footer-top">
+          <h3 class="footer__container-title">Mis eventos</h3>
+          <button class="footer-button">Click</button>
+        </div>
+        <div class="footer__container-content">
+          <img
+            class="footer__content-img"
+            src="../../../../assets/home-photos/time.png"
+            alt=""
+          />
+          <div class="footer__content">
+            <div class="footer__content-information">
+              <h3 class="footer__information-number">2</h3>
+              <h3 class="footer__information-label">Reuniones</h3>
+            </div>
+            <div class="footer__content-information">
+              <h3 class="footer__information-number">10</h3>
+              <h3 class="footer__information-label">Análisis</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="my-profile">
+      <div class="profile-header">
+        <h1 class="profile-header-h1">Mi Perfil</h1>
+        <i class="bx bxs-edit profile-header-icon"></i>
+      </div>
+      <div class="profile-content">
+        <img
+          class="profile-content-img"
+          src="../../../../assets/home-photos/teacher.jpg"
+          alt=""
+        />
+        <div class="profile-labels">
+          <h1 class="profile-labels-h1">DR. Pedro</h1>
+          <h2 class="profile-labels-h2">Profesor</h2>
+          <div class="profile-location-container">
+            <i class="bx bxs-map location-icon"></i>
+            <h2 class="location-h2">Santo Domingo - RD</h2>
+          </div>
+        </div>
+      </div>
+      <div class="profile-footer">
+        <div class="profile-footer-content">
+          <h2 class="profile-footer-h2">Institución</h2>
+          <h3 class="profile-footer-h3">ITLA</h3>
+        </div>
+        <div class="profile-footer-content">
+          <h2 class="profile-footer-h2">Nacimiento</h2>
+          <h3 class="profile-footer-h3">17.07.86</h3>
+        </div>
+        <div class="profile-footer-content">
+          <h2 class="profile-footer-h2">Horas de trabajo</h2>
+          <h3 class="profile-footer-h3">9AM - 5PM</h3>
+        </div>
+      </div>
+    </div>
+    <div class="my-profile" style="margin-top: 1.5rem">
+      <div class="profile-header">
+        <h1 class="profile-header-h1">Próxima Reunión</h1>
+        <i class="bx bxs-stopwatch profile-header-icon"></i>
+      </div>
+      <div class="container">
+        <table class="calendrier">
+          <thead class="jour">
+            <tr class="semaine">
+              <th scope="col"><abbr title="Lundi">Lun</abbr></th>
+              <th scope="col"><abbr title="Mardi">Mar</abbr></th>
+              <th scope="col"><abbr title="Mercredi">Mier</abbr></th>
+              <th scope="col"><abbr title="Jeudi">Jue</abbr></th>
+              <th scope="col"><abbr title="Vendredi">Vier</abbr></th>
+              <th scope="col"><abbr title="Samedi">Sab</abbr></th>
+              <th scope="col"><abbr title="Dimanche">Dom</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col"><abbr title="Lundi">1</abbr></th>
+              <th scope="col"><abbr title="Mardi">2</abbr></th>
+              <th scope="col"><abbr title="Mercredi">3</abbr></th>
+              <th scope="col"><abbr title="Jeudi">4</abbr></th>
+              <th scope="col"><abbr title="Vendredi">5</abbr></th>
+              <th scope="col"><abbr title="Samedi">6</abbr></th>
+              <th scope="col">
+                <abbr title="Dimanche"><span class="sunday">7</span></abbr>
+              </th>
+            </tr>
+
+            <tr>
+              <th scope="col"><abbr title="Lundi">8</abbr></th>
+              <th scope="col"><abbr title="Mardi">9</abbr></th>
+              <th scope="col"><abbr title="Mercredi">10</abbr></th>
+              <th scope="col"><abbr title="Jeudi">11</abbr></th>
+              <th scope="col"><abbr title="Vendredi">12</abbr></th>
+              <th scope="col"><abbr title="Samedi">13</abbr></th>
+              <th scope="col"><span class="sunday">14</span></th>
+            </tr>
+
+            <tr>
+              <th scope="col"><abbr title="Lundi">14</abbr></th>
+              <th scope="col">
+                <abbr title="Mardi"><span class="current">15</span></abbr>
+              </th>
+              <th scope="col"><abbr title="Mercredi">16</abbr></th>
+              <th scope="col"><abbr title="Jeudi">17</abbr></th>
+              <th scope="col"><abbr title="Vendredi">18</abbr></th>
+              <th scope="col"><abbr title="Samedi">19</abbr></th>
+              <th scope="col">
+                <abbr title="Dimanche"><span class="sunday">20</span></abbr>
+              </th>
+            </tr>
+
+            <tr>
+              <th scope="col"><abbr title="Lundi">21</abbr></th>
+              <th scope="col"><abbr title="Mardi">22</abbr></th>
+              <th scope="col"><abbr title="Mercredi">23</abbr></th>
+              <th scope="col"><abbr title="Jeudi">24</abbr></th>
+              <th scope="col"><abbr title="Vendredi">25</abbr></th>
+              <th scope="col"><abbr title="Samedi">26</abbr></th>
+              <th scope="col">
+                <abbr title="Dimanche"><span class="sunday">27</span></abbr>
+              </th>
+            </tr>
+
+            <tr>
+              <th scope="col"><abbr title="Lundi">28</abbr></th>
+              <th scope="col"><abbr title="Mardi">29</abbr></th>
+              <th scope="col"><abbr title="Mercredi">30</abbr></th>
+              <th scope="col"><abbr title="Jeudi">31</abbr></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

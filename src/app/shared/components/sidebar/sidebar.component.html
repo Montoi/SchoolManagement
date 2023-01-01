@@ -1,0 +1,25 @@
+<body>
+  <!--=============== NAV ===============-->
+  <div class="nav" id="nav" [ngClass]="collapsed ? 'show-menu' : ''">
+      <nav class="nav__content">
+          <div class="nav__toggle" id="nav-toggle" >
+              <i class='bx bx-chevron-right' (click)="toggleCollapse()" [ngClass]="collapsed ? 'rotate-icon' : ''"></i>
+          </div>
+          <a href="#" class="nav__logo">
+              <i class='bx bxs-heart' ></i>
+              <span class="nav__logo-name">Administrador de Cursos</span>
+          </a>
+
+          <div class="nav__list" >
+
+              <a href="#"  *ngFor="let link of links" class="nav__link "routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="link.routeLink">
+                <i class= {{link.icon}}></i>
+                <span class="nav__name ">{{link.label}}</span>
+              </a>
+
+
+          </div>
+      </nav>
+  </div>
+
+</body>

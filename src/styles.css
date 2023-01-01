@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #4264D0;
+  --first-color-secondary: hsla(226, 67%, 70%, 0.96);
+  --first-color-secondary-lighter: hsla(226, 67%, 70%, 0.3);
+  --first-color-contrast: #fff;
+  --first-color-light: #4264D0;
+  --title-color: hsl(228, 12%, 15%);
+  --text-color: hsl(228, 8%, 50%);
+  --body-color: hsl(228, 100%, 99%);
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #f81004;
+  --ion-color-danger-rgb: 229, 51, 41;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #ca2d24;
+  --ion-color-danger-tint: #e8473e;
+  --ion-color-danger-tint-transparent: rgba(232, 71, 62, 0.4);
+
+
+  /*========== Font and typography ==========*/
+     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+   --body-font: 'Poppins', sans-serif;
+   --big-font-size: 2rem;
+   --h1-font-size: 1.5rem;
+   --h2-font-size: 1.25rem;
+   --h3-font-size: 1.125rem;
+   --normal-font-size: .938rem;
+   --small-font-size: .813rem;
+   --smaller-font-size: .75rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.section{
+  width: 800px;
+}
+
+/* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px) {
+  body{
+      zoom: 1.5;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  body{
+      zoom: 1.5;
+
+  }
+}
