@@ -2,21 +2,21 @@
   <h2>Agrega un Estudiante</h2>
   <h1>El futuro es de todos!</h1>
 
-  <form action="" id="join-us">
+  <form [formGroup]="form" action="" id="join-us">
     <div class="fields">
       <span>
-       <input placeholder="Nombre" type="text" />
+       <input placeholder="Nombre" type="text" formControlName="name" name="name" />
     </span>
      <span>
-       <input placeholder="Apellido" type="password" />
+       <input placeholder="Apellido" type="text" formControlName="lastName" name="lastName"/>
     </span>
     <br />
     <span>
-      <input placeholder="Edad" type="password" />
+      <input placeholder="Edad" type="number" formControlName="age" name="age"/>
    </span>
     </div>
     <div class="submit">
-      <button class="submit-button">Agregar</button>
+      <button class="submit-button" [disabled]="!form.valid" (click)="accept()">Agregar</button>
     </div>
   </form>
 </div>

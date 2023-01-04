@@ -3,62 +3,28 @@
     <div class="title-container">
       <h2 class="orders-h2">Estudiantes</h2>
     </div>
-  <!-- <div class="header">.</div> -->
-  <table>
-    <thead>
-      <tr>
+    <!-- <div class="header">.</div> -->
+    <table>
+      <thead>
+        <tr>
           <th>Nombre</th>
           <th>Apellido</th>
         </tr>
       </thead>
       <tbody>
-          <tr>
-            <td>Foldable mini drone</td>
-              <td>85631</td>
-            </tr>
-            <tr>
-              <td>Foldable mini drone</td>
-                <td>85631</td>
-              </tr>
-              <tr>
-                <td>Foldable mini drone</td>
-                  <td>85631</td>
-                </tr>
-                <tr>
-                  <td>Foldable mini drone</td>
-                    <td>85631</td>
-                  </tr>
-                  <tr>
-                    <td>Foldable mini drone</td>
-                      <td>85631</td>
-                    </tr>
-                    <tr>
-                      <td>Foldable mini drone</td>
-                        <td>85631</td>
-                      </tr>
-                      <tr>
-                        <td>Foldable mini drone</td>
-                          <td>85631</td>
-                        </tr>
-                        <tr>
-                          <td>Foldable mini drone</td>
-                          <td>85631</td>
-                          </tr>
-                          <tr>
-                            <td>Foldable mini drone</td>
-                            <td>85631</td>
-                          </tr>
-                            <tr>
-                              <td>Foldable mini drone</td>
-                                <td>85631</td>
-                              </tr>
-
+        <tr
+          class="tr"
+          *ngFor="let student of students"
+          (click)="onSelect(student)"
+        >
+          <td>{{ student.name }}</td>
+          <td>{{ student.lastName }}</td>
+        </tr>
       </tbody>
     </table>
     <a href="#">Show all</a>
   </div>
   <div class="right">
-
     <div class="my-profile">
       <div class="profile-header">
         <h1 class="profile-header-h1">Mi Perfil</h1>
@@ -70,51 +36,107 @@
           src="../../../../assets/califications-photos/Hands - Graduate.png"
           alt=""
         />
-        <div class="profile-labels">
-          <h1 class="profile-labels-h1">DR. Pedro | Garcia</h1>
+        <div class="profile-labels" *ngIf="selected">
+          <h1 class="profile-labels-h1">
+            {{ selected.name }} | {{ selected.lastName }}
+          </h1>
           <h2 class="profile-labels-h2">Estudiante</h2>
         </div>
+        <div class="profile-labels" *ngIf="!selected">
+          <h1 class="profile-labels-h1">Selecciona un estudiante</h1>
+        </div>
       </div>
-
     </div>
-  <div class="calification-container">
-    <div class="title-container">
-      <h2 class="orders-h2">Calificaciones</h2>
-    </div>
-  <!-- <div class="header">.</div> -->
-  <table class="calification-table">
-    <thead>
-      <tr>
-          <th>Materias</th>
-          <th>Calificación</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr>
-            <td>Lengua Española</td>
-              <td><input type="text"></td>
+    <div class="calification-container">
+      <div class="title-container">
+        <h2 class="orders-h2">Calificaciones</h2>
+      </div>
+      <!-- <div class="header">.</div> -->
+      <form [formGroup]="form">
+        <table class="calification-table">
+          <thead>
+            <tr>
+              <th>Materias</th>
+              <th>Calificación</th>
+              <th>Literal</th>
             </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>Matematicas</td>
-            <td><input type="text"></td>
-          </tr>
-    </tbody>
-    <tbody>
-      <tr>
-        <td>Naturales</td>
-          <td><input type="text"></td>
-        </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>Sociales</td>
-        <td><input type="text"></td>
-      </tr>
-</tbody>
-  </table>
-</div>
-</div>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lengua Española</td>
+              <td>
+                <input
+                  type="number"
+                  formControlName="spanishLanguage"
+                  name="spanishLanguage"
+                  [placeholder]="spanish"
+                  [(ngModel)]="spanish"
+                />
+              </td>
+              <td>{{letra(spanish)}}</td>
 
+            </tr>
+            <tr>
+              <td>Matematicas</td>
+              <td>
+                <input
+                  type="number"
+                  formControlName="math"
+                  name="math"
+                  [placeholder]="math"
+                  [(ngModel)]="math"
+                />
+              </td>
+              <td>{{letra(math)}}</td>
+
+            </tr>
+            <tr>
+              <td>Sociales</td>
+              <td>
+                <input
+                  type="number"
+                  formControlName="historyScience"
+                  name="historyScience"
+                  [placeholder]="historyScience"
+                  [(ngModel)]="historyScience"
+                />
+              </td>
+              <td>{{letra(historyScience)}}</td>
+
+            </tr>
+            <tr>
+              <td>Naturales</td>
+              <td>
+                <input
+                  type="number"
+                  formControlName="naturalSciences"
+                  name="naturalSciences"
+                  [placeholder]="naturalSciences"
+                  [(ngModel)]="naturalSciences"
+                />
+              </td>
+              <td>{{letra(naturalSciences)}}</td>
+
+            </tr>
+            <tr>
+
+
+                <input
+                  type="hidden"
+                  formControlName="studentId"
+                  name="studentId"
+                  [(ngModel)]="studentsId"
+                  max="100"
+                />
+
+
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-button-container">
+          <button class="table-button" (click)="accept()" [disabled]="!form.valid">Aceptar</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
@@ -10,6 +12,8 @@ import { ListComponent } from './features/private/list/list.component';
 import { HomeComponent } from './features/private/home/home.component';
 import { AddStudentComponent } from './shared/components/add-student/add-student.component';
 import { CalificationsComponent } from './features/private/califications/califications.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +24,14 @@ import { CalificationsComponent } from './features/private/califications/calific
     ListComponent,
     HomeComponent,
     AddStudentComponent,
-    CalificationsComponent
+    CalificationsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+
     // ESTA APP ESTA HECHA SIN LIBRERIAS EXTERNAS, TODO A CODIGO
   ],
   providers: [],
