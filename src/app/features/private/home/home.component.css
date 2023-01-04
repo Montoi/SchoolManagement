@@ -259,3 +259,93 @@
   border-radius: 100%;
   padding: 8px
 }
+
+.second-block{
+  margin-top: 24px;
+}
+@media screen and (max-width: 1430px)  {
+  .main{
+    display: block;
+  }
+  .mid{
+    width: 900px;
+  }
+  .right{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin-top: 24px;
+    margin-left: 0;
+  }
+  .second-block{
+    margin-top: 0;
+  }
+
+
+}
+@media screen and (max-width: 1090px)  {
+  .main{
+    display: block;
+  }
+  .mid{
+    width: 750px;
+  }
+  .right{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin-top: 24px;
+    margin-left: 0;
+  }
+  .second-block{
+    margin-top: 0;
+  }
+  .footer__content{
+    margin: 4px;
+  }
+
+
+}
+
+@media screen and (max-width: 925px)  {
+  .top{
+    width: 70%;
+
+    margin: auto;
+  }
+  .right{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .my-profile{
+    width: 70%;
+  }
+  .second-block{
+    margin: 24px 0;
+  }
+  .footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__container{
+    width: 70%;
+    margin-top: 20px;
+  }
+  .center{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .center-container{
+    margin-top: 30px;
+    width: 50%;
+  }
+  .mid{
+    width: 600px;
+  }
+
+
+}

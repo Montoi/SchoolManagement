@@ -30,6 +30,8 @@ export class AddStudentComponent implements OnInit {
     const resp = await this.requestService.postStudents(this.form.value).then((c) => c);
     console.log(resp)
     this.router.navigateByUrl('/estudiantes')
+    alert('Agregado correctamente');
+
 
 
   }

@@ -66,8 +66,9 @@ export class CalificationsComponent implements OnInit {
   }
   public async accept(): Promise<void>{
     if (this.editing) {
-      console.log('editing')
+
       await this.requestService.putSubject(this.form.value).then((c) => c);
+      alert('Editado correctamente');
     }
     else{
       if (this.studentsId == 0) {
@@ -75,7 +76,9 @@ export class CalificationsComponent implements OnInit {
         return
       }
       await this.requestService.postSubject(this.form.value).then((c) => c);
-      console.log('corrigiendo')
+      
+      alert('Corregido correctamente');
+
     }
 
   }

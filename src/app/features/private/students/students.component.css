@@ -21,7 +21,7 @@
 
 .orders table{
   background: var(--first-color-contrast);
-  width: 100%;
+  width: 60%;
   border-radius: 30px ;
   padding: 10px;
   text-align: center;
@@ -58,6 +58,7 @@ table tbody td{
 
 .warning{
   color: var(--ion-color-danger);
+  cursor: pointer;
 }
 
 .add{
@@ -66,4 +67,13 @@ table tbody td{
   width: 150px;
   cursor: pointer;
 }
-
+@media screen and (max-width: 1300px)  {
+  .orders table{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 925px)  {
+  .orders table{
+    width: 89%;
+  }
+}

@@ -11,7 +11,7 @@ export const navbarData = [
   },
   {
     routeLink: 'calificaciones',
-    icon: 'bx bxs-balloon',
+    icon: 'bx bxs-castle',
     label: 'Calificaciones'
   },
   {

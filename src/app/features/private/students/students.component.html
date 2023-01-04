@@ -9,7 +9,6 @@
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Edad</th>
-          <th>Estatus</th>
           <th></th>
           <th class="add" routerLink="/addStudent" >Agregar</th>
 
@@ -20,11 +19,10 @@
               <td>{{student.name}}</td>
               <td>{{student.lastName}}</td>
               <td>{{student.age}}</td>
-              <td>Pending</td>
-              <td class="primary"> Corregir </td>
+              <td>Activo</td>
               <td class="warning" (click)="onDeleteStudents(student.studentId)"> Eliminar </td>
           </tr>
       </tbody>
   </table>
-  <a href="#">Show all </a>
+ 
 </div>

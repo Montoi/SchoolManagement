@@ -43,6 +43,8 @@ export class StudentsComponent implements OnInit {
   public async onDeleteStudents(id: number): Promise<void> {
     this.requestService.deleteStudents(id);
     this.refresh();
+    alert('Eliminado Correctamente');
+
   }
 
 }
